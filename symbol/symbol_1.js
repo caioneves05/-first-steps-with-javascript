@@ -1,0 +1,5 @@
+//SYMBOL É PRIMITIVO, ÚNICO E IMUTÁVEL, ATUANDO COMO UMA CHAVE ÚNICA EM UM OBJETO.
+
+Symbol("a");
+Symbol("b");
+Symbol("c");

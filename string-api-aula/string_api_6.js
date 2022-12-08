@@ -1,0 +1,19 @@
+"JavaScript".slice(0, 4);
+//RETORNA UMA PARTE DA STRING QUE ESTÁ INVOCANDO A FUNÇÃO INICIANDO NA POSIÇÃO PASSADA NO PRIMEIRO PARÂMETRO ATÉ A POSIÇÃO FINAL PASSADA NO SEGUNDO PARÂMETRO, OU DA POSIÇÃO PASSADA NO PRIMEIRO PARÂMETRO ATÉ O FIM CASO O SEGUNDO PARÂMETRO NÃO SEJA INFORMADO.
+//'Java'
+"JavaScript".slice(4);
+//'Script
+"JavaScript".slice(0, -6);
+//'Java'
+"JavaScript".slice(-6);
+//'Script
+"C;Java;JavaScript;Ruby".split(";");
+//RETORNA UM ARRAY CONTENDO O RESULTADO DA DIVISÃO DA STRING ORIGINAL DE ACORDO COM O CRITÉRIO PASSADO POR PARÂMETRO.
+//'C', 'Java', 'JavaScript', 'Ruby'
+"JavaScript".substring(0, 4);
+//SIMILAR AO SLICE, NÃO ACEITA VALORES NEGATIVOS COMO PARÂMETRO E PERMITE A INVERSÃO DOS PARÂMETROS.
+//'Java'
+"JavaScript".substring(4, 0);
+//'Java'
+"JavaScript".substring(4);
+//'Script'
