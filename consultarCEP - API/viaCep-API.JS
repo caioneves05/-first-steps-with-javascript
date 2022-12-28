@@ -19,7 +19,7 @@ function consultar(){
         let localidade = convertCEP.localidade;
         let uf = convertCEP.uf;
 
-        document.getElementById('cep-consultado').innerHTML = `CEP: ${cep} <br> logradouro: ${logradouro} <br> bairro: ${bairro} <br> localidade: ${localidade} <br> estado: ${uf} <br>`
+        let resultadoConsulta = document.getElementById('cep-consultado')
+        resultadoConsulta.innerHTML = `CEP: ${cep} <br> logradouro: ${logradouro} <br> bairro: ${bairro} <br> localidade: ${localidade} <br> estado: ${uf} <br>`
     }
 };
-
