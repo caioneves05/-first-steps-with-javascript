@@ -21,3 +21,5 @@ function calAge(age){
 };
 console.log(calAge(-1));
 console.log(calAge(65));
+
+module.exports = calAge;
