@@ -1,3 +1,7 @@
+//Você está no comando da churrasqueira. Uma espetada vegetariana é uma espetada que só tem legumes (-o) . Um espeto não vegetariano é um espeto com pelo menos um pedaço de carne (-x) .
+
+//Por exemplo, a grelha abaixo tem 4 espetos não vegetarianos e 1 espeto vegetariano (o do meio).
+
 const barbecueGrill = 
 [
     "--xo--x--ox--",
