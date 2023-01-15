@@ -25,3 +25,35 @@ function groupBy(array,prop) {
 const agrupados = groupBy(carros, 'marca');
 
 console.log(agrupados)
+
+
+
+
+//or
+
+
+
+
+const produtos = [
+  {id: 123, nome: 'Camiseta', cor: 'preto', tamanho: 'G', categoria: 'Vestuário'},
+  {id: 456, nome: 'Tênis', cor: 'preto', tamanho: '41', categoria: 'Vestuário'},
+  {id: 789, nome: 'Bola', cor: 'verde', tamanho: 'Único', categoria: 'Esporte'}
+]
+
+Array.prototype.groupBy = function(prop) {
+  let value = this.reduce(function(total,item) {
+    let key = item[prop];
+    total[key] = (total[key] || []).concat(item);
+
+    return total;
+  });
+  return value;
+};
+
+const produtosFiltrados = produtos.filter(function(item){
+  return item.cor == 'preto';
+}).filter(function(item){
+  return item.tamanho == 'G';
+}).groupBy('categoria'); 
+
+console.log(produtosFiltrados)
