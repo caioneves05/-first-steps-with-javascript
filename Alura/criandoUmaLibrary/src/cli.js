@@ -6,12 +6,12 @@ import listaValidada from "./http-validacao.js";
 
 const rota = process.argv;
 
-function imprimeLista(valida, resultado, identificador = '') {
+async function imprimeLista(valida, resultado, identificador = '') {
     
     if(valida) {
-        console.log(chalk.blue('Lista validada:'),chalk.black.bgWhite(identificador), listaValidada(resultado));
+        console.log(chalk.blue('Lista validada:'),chalk.black.bgWhite(identificador), await listaValidada(resultado));
     } else {
-        console.log(chalk.blue('Lista de Links:'),chalk.black.bgWhite(identificador), listaValidada(resultado));
+        console.log(chalk.blue('Lista de Links:'),chalk.black.bgWhite(identificador), await listaValidada(resultado));
     }
     
 }

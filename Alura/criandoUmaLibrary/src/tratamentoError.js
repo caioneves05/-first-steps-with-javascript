@@ -5,4 +5,13 @@ function trataErro(error) {
     throw new Error(chalk.red(error.code, ': Não há nenhum arquivo.'));
 }
 
-export default trataErro;
+function manegaErroLink(erro) {
+    if(erro.cause.code === 'ENOTFOUND') {
+        return `LINK NÃO ENCONTRADO`;
+    } else {
+        return `Ocorreu algum erro`;
+    };
+};
+
+
+export { trataErro, manegaErroLink };
