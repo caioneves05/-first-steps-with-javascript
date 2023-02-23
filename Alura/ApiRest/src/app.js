@@ -1,26 +1,28 @@
 import express from "express"
-const app = express();
+import db from "./config/dbConnect.js";
+import livros from "./models/Livro.js";
+import routes from "./routes/index.js";
+
+
+
+db.on("Error", console.log.bind(console, 'Erro de Conexão.'));
+db.once("open", () => {
+  console.log('Conexão com o banco de dados realizada com sucesso.')
+});
+
+
+const app = (express.json);
+
+routes(app);
+
 const port = process.env.PORT || 3000;
 //Conseguindo interpretar informações recebidas via JSON
 app.use(express.json())
 
-const livros = [
-    {id: 1, nome: "Shrek 2"},
-    {id: 2, nome: "Shrek 3"},
-    {id: 3, nome: "O Mundo de Coraline"},
-]
 
 function buscaLivro(id){
   return livros.findIndex(livro => livro.id == id);
 };
-
-app.get('/', (req, res) => {
-  res.status(200).send('Curso de Node')
-})
-
-app.get('/livros', (req,res) =>{
-    res.status(200).json(livros);
-});
 
 app.get('/livros/:id', (req,res) =>{
 
