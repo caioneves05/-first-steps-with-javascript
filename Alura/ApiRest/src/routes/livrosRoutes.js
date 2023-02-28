@@ -3,9 +3,8 @@ import LivroController from "../controllers/livrosController.js";
 
 const router = express.Router();
 
-//Definindo as rotas
-
 router
-    .get("/livros", LivroController.listarLivros)
-
-export default router;
+  .get('/livros', LivroController.listarLivros)
+  .post('/livros', LivroController.cadastrarLivro)
+  
+export default router;   
